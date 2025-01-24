@@ -47,56 +47,63 @@
   	   </p>
   	   <br/><br/><br/>
   	  </div>
-	  <div class="icon-class" data-id="1">
-	    <img src="../icons/2730282_solid_harry_glasses_potter_scar.png"> 
-	  </div>
-	  <div class="icon-class" data-id="2">
-	    <img src="../icons/2730281_potter_solid_owl_hedwig_harry.png"> 
-	  </div>
-	  <div class="icon-class" data-id="3">
-	    <img src="../icons/2730274_broom_potter_harry_nimbus_solid.png"> 
-	  </div>
-	  <div class="icon-class" data-id="4">
-	    <img src="../icons/2730290_castle_solid_hogwarts_potter_harry.png"> 
-	  </div>
-	  <div class="icon-class" data-id="5">
-	    <img src="../icons/2730267_potter_solid_magic_sorting_harry_hat.png"> 
-	  </div>
-	  <div class="icon-class" data-id="6">
-	    <img src="../icons/2730268_quidditch_snitch_potter_harry_solid_golden.png"> 
-	  </div>
-	  <div class="icon-class" data-id="7">
-	    <img src="../icons/2730286_solid_elder_potter_wand_harry.png"> 
-	  </div>
-	  <div class="icon-class" data-id="8">
-	    <img src="../icons/2730306_willow_tree_whomping_solid_harry_potter.png"> 
-	  </div>
-	  <div class="icon-class" data-id="9">
-	    <img src="../icons/2730291_map_marauders_solid_potter_harry.png"> 
-	  </div>
-	  <div class="icon-class" data-id="10">
-	    <img src="../icons/2730307_potter_solid_quidditch_goals_harry.png"> 
-	  </div>
-	  <div class="icon-class" data-id="11">
-	    <img src="../icons/2730308_dobby_potter_harry_solid_elf.png"> 
-	  </div>
-	  <div class="icon-class" data-id="12">
-	    <img src="../icons/2730300_mirror_erised_solid_harry_potter.png"> 
-	  </div>
-	  <div class="icon-class" data-id="13">
-	    <img src="../icons/2730288_harry_hogwarts_potter_train_express_solid.png"> 
-	  </div>
-	  <div class="icon-class" data-id="14">
-	    <img src="../icons/2730269_key_chamber_potter_secrets_harry_solid.png"> 
-	  </div>
-	  <div class="icon-class" data-id="15">
-	    <img src="../icons/2730270_harry_solid_potter_wolf_sirius.png"> 
-	  </div>
-	  <div class="icon-class" data-id="16">
-	    <img src="../icons/2730262_potter_solid_deathly_hallows_harry.png"> 
-	  </div>
-	  <div id="result">
-	  </div>
+  	  <div class="container-solved container-text" style="display: none">
+        Bravo! Tu peux maintenant continuer sur le chemin et descendre vers la place, d'où on a une belle vue sur le chateau. Rejoins-moi!
+        <br/><br/>
+        <div style="text-align: right;">R.H.</div>
+  	  </div>
+  	  <div class="container-icons">
+		  <div class="icon-class" data-id="1">
+		    <img src="../icons/2730282_solid_harry_glasses_potter_scar.png"> 
+		  </div>
+		  <div class="icon-class" data-id="2">
+		    <img src="../icons/2730281_potter_solid_owl_hedwig_harry.png"> 
+		  </div>
+		  <div class="icon-class" data-id="3">
+		    <img src="../icons/2730274_broom_potter_harry_nimbus_solid.png"> 
+		  </div>
+		  <div class="icon-class" data-id="4">
+		    <img src="../icons/2730290_castle_solid_hogwarts_potter_harry.png"> 
+		  </div>
+		  <div class="icon-class" data-id="5">
+		    <img src="../icons/2730267_potter_solid_magic_sorting_harry_hat.png"> 
+		  </div>
+		  <div class="icon-class" data-id="6">
+		    <img src="../icons/2730268_quidditch_snitch_potter_harry_solid_golden.png"> 
+		  </div>
+		  <div class="icon-class" data-id="7">
+		    <img src="../icons/2730286_solid_elder_potter_wand_harry.png"> 
+		  </div>
+		  <div class="icon-class" data-id="8">
+		    <img src="../icons/2730306_willow_tree_whomping_solid_harry_potter.png"> 
+		  </div>
+		  <div class="icon-class" data-id="9">
+		    <img src="../icons/2730291_map_marauders_solid_potter_harry.png"> 
+		  </div>
+		  <div class="icon-class" data-id="10">
+		    <img src="../icons/2730307_potter_solid_quidditch_goals_harry.png"> 
+		  </div>
+		  <div class="icon-class" data-id="11">
+		    <img src="../icons/2730308_dobby_potter_harry_solid_elf.png"> 
+		  </div>
+		  <div class="icon-class" data-id="12">
+		    <img src="../icons/2730300_mirror_erised_solid_harry_potter.png"> 
+		  </div>
+		  <div class="icon-class" data-id="13">
+		    <img src="../icons/2730288_harry_hogwarts_potter_train_express_solid.png"> 
+		  </div>
+		  <div class="icon-class" data-id="14">
+		    <img src="../icons/2730269_key_chamber_potter_secrets_harry_solid.png"> 
+		  </div>
+		  <div class="icon-class" data-id="15">
+		    <img src="../icons/2730270_harry_solid_potter_wolf_sirius.png"> 
+		  </div>
+		  <div class="icon-class" data-id="16">
+		    <img src="../icons/2730262_potter_solid_deathly_hallows_harry.png"> 
+		  </div>
+		  <div id="result">
+		  </div>
+		</div>
   </div>
   <script>
   	var pressed = [];
@@ -110,7 +117,8 @@
         $("#result").html("result : " + JSON.stringify(pressed)); 
 
         if (JSON.stringify(pressed) == '["2","1","4"]') {
-        	$("#result").html("WON");
+        	$(".container-icons").css("display", "none");
+        	$(".container-solved").css("display", "block");
         }
         else if (pressed.length == 3) {
         	$("#result").html("LOST");
