@@ -23,11 +23,11 @@
         padding: 5px 10px;
     }
     .container-input {
-    	width: 60%;
+    	width: 80%;
     	margin: 0 auto;
     }
     #myInput {
-    	width: 80%;
+    	width: 60%;
     }
 
   </style>
@@ -58,7 +58,7 @@
   	var pressed = [];
     $(document).ready(function() {
       $("#myButton").click(function() {
-        var inputText = $("#myInput").val(); 
+        var inputText = $("#myInput").val().trim();
         if (inputText === 'MCGONAGALL') {
           $(".container-input").css("display", "none");
         	$(".container-solved").css("display", "block");
