@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-type" content="application/json; charset=utf-8" />
 <head>
   <title>Edimbourg</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -13,22 +16,6 @@
         font-family: Open Sans, Helvetica, Arial, sans-serif;
         font-size: 45px;
   	}
-    .icon-class {
-      width: 150px; /* Adjust width as needed */
-      height: 150px; /* Adjust height as needed */
-      background-color: white;
-      transition: background-color 0.2s ease;
-      margin: 10px;
-      display: inline-block; /* To display divs in a line */
-      border: lightgrey 2px solid;
-      border-radius: 10px;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    }
-    .icon-class img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Ensures the image covers the div */
-    }
 
     #myButton,#myInput {
     	  font-family: Open Sans, Helvetica, Arial, sans-serif;
@@ -49,21 +36,23 @@
 
   <div class="container">
   	  <div class="container-text">
-  	  	Tout près de cette carte se trouve une tombe dont le nom de famille a inspiré JK Rowling...
-      <br/>
-        Quel est ce nom?
+  	  	Près de cette carte tu trouveras le nom d'un de mes éminents collègues, lequel?
   	   <br/><br/><br/>
   	  </div>
   	  <div class="container-solved container-text" style="display: none">
-        Bravo!
-        <br/><br/>
+        <p>
+          Ils ne me laissent pas vraiment de répit, je suis ressorti par la porte sud
+        </p>
+        <p>
+            J'ajouterai des instructions ici quand je le pourrai...
+        </p>
         <div style="text-align: right;">R.H.</div>
   	  </div>
   	  <div class="container-input">
-				 <input type="text" id="myInput" placeholder="">
-		 	   <button id="myButton">OK</button>
-		  	 <div id="output"></div>
-		  </div>
+          <input type="text" id="myInput" placeholder="">
+          <button id="myButton">OK</button>
+          <div id="output"></div>
+      </div>
   </div>
   <script>
   	var pressed = [];
@@ -74,7 +63,7 @@
           $(".container-input").css("display", "none");
         	$(".container-solved").css("display", "block");
         } else {
-          $("#myInput").val("");
+          $("#myInput").css("border-color", "red");
         }
       });
 
