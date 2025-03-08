@@ -102,8 +102,6 @@
 		<div class="icon-class" data-id="16">
 			<img src="../icons/2730262_potter_solid_deathly_hallows_harry.png">
 		</div>
-		<div id="result">
-		</div>
 	</div>
 </div>
 <script>
@@ -115,8 +113,6 @@
         if (!pressed.includes(pressedId)) {
         	pressed.push(pressedId);
         }
-        $("#result").html("result : " + JSON.stringify(pressed)); 
-
         if (JSON.stringify(pressed) == '["8","1","7","15","4"]') {
         	$(".container-icons").css("display", "none");
         	$(".container-solved").css("display", "block");
